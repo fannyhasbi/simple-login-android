@@ -41,9 +41,11 @@ public class RegisterActivity extends AppCompatActivity {
         username = etUsernameRegister.getText().toString();
         password = etPasswordRegister.getText().toString();
 
-        usermodel = new User();
-        usermodel.setUsername(username);
-        usermodel.setPassword(password);
+        if(password.length() > 6){
+            usermodel = new User();
+            usermodel.setUsername(username);
+            usermodel.setPassword(password);
+        }
     }
 
     private void initDataHandler() {
