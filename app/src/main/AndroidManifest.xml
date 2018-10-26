@@ -27,7 +27,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".About"></activity>
+        <activity android:name=".About" />
+        <activity
+            android:name=".ListUser"
+            android:label="@string/title_activity_list_user"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         username = etUsernameRegister.getText().toString();
         password = etPasswordRegister.getText().toString();
 
-        if(password.length() > 6){
+        if(password.isEmpty() || password.length() > 6){
             usermodel = new User();
             usermodel.setUsername(username);
             usermodel.setPassword(password);

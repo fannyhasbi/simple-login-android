@@ -23,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsernameLogin, etPasswdLogin;
     private Button btnSignUpLogin, btnSignInLogin;
     String username, password;
-    private User user;
-    private DatabaseHandler presenter;
+    private static User user;
+    private static DatabaseHandler presenter;
 
 
     @Override
@@ -36,6 +36,14 @@ public class LoginActivity extends AppCompatActivity {
         initData();
         login();
         register();
+    }
+
+    public static User getUser(){
+        return user;
+    }
+
+    public static DatabaseHandler getPresenter(){
+        return presenter;
     }
 
     private void initView() {
