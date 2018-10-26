@@ -41,6 +41,14 @@ public class About extends AppCompatActivity {
         btnDelete = findViewById(R.id.btnDelete);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        Intent utama = new Intent(this, MainActivity.class);
+        startActivity(utama);
+        finish();
+    }
+
     private void initUser(){
         name = etUserAbout.getText().toString();
         pass = etPassAbout.getText().toString();

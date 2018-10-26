@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHandler databaseHandler;
     private User usermodel;
     private TextView tvNameMain;
-    private Button btnLogoutMain, btnAbout, btnKelompok;
+    private Button btnLogoutMain, btnAbout, btnKelompok, btnEmail;
     private Button exit;
 
     @Override
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         logout();
         about();
         kelompok();
+        //email();
     }
 
     @Override
@@ -75,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
         btnKelompok.setOnClickListener(V -> {
             Intent kel = new Intent(this, KelompokActivity.class);
             startActivity(kel);
+            finish();}
+        );
+    }
+
+    private void email(){
+        btnEmail.setOnClickListener(V -> {
+            Intent yoyoy = new Intent(this, EmailActivity.class);
+            startActivity(yoyoy);
             finish();}
         );
     }

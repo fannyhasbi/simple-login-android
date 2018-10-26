@@ -47,6 +47,13 @@ public class RegisterActivity extends AppCompatActivity {
         usermodel.setPassword(password);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent utama = new Intent(this, LoginActivity.class);
+        startActivity(utama);
+        finish();
+    }
+
     private void initDataHandler() {
         initUser();
         String pass = etPasswordRegister.getText().toString();
