@@ -32,6 +32,7 @@
             android:name=".ListUser"
             android:label="@string/title_activity_list_user"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".KelompokActivity"></activity>
     </application>
 
 </manifest>

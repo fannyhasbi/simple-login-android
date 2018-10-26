@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHandler databaseHandler;
     private User usermodel;
     private TextView tvNameMain;
-    private Button btnLogoutMain;
-    private Button btnAbout;
+    private Button btnLogoutMain, btnAbout, btnKelompok;
     private Button exit;
 
     @Override
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         initPreference();
         logout();
         about();
+        kelompok();
     }
 
     @Override
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         tvNameMain = findViewById(R.id.tvNameMain);
         btnLogoutMain = findViewById(R.id.btnLogoutMain);
         btnAbout = findViewById(R.id.btnAbout);
+        btnKelompok = findViewById(R.id.btnKelompok);
         exit = findViewById(R.id.btnLogoutMain);
     }
 
@@ -64,8 +65,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void about(){
         btnAbout.setOnClickListener(V -> {
-            Intent reg = new Intent(this, About.class);
-            startActivity(reg);
+            Intent abt = new Intent(this, About.class);
+            startActivity(abt);
+            finish();}
+        );
+    }
+
+    private void kelompok(){
+        btnKelompok.setOnClickListener(V -> {
+            Intent kel = new Intent(this, KelompokActivity.class);
+            startActivity(kel);
             finish();}
         );
     }

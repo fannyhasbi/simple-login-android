@@ -3,6 +3,7 @@ package com.example.kelompok26.aplikasimodul2kel06;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,22 +42,27 @@ public class RegisterActivity extends AppCompatActivity {
         username = etUsernameRegister.getText().toString();
         password = etPasswordRegister.getText().toString();
 
-        if(password.isEmpty() || password.length() > 6){
-            usermodel = new User();
-            usermodel.setUsername(username);
-            usermodel.setPassword(password);
-        }
+        usermodel = new User();
+        usermodel.setUsername(username);
+        usermodel.setPassword(password);
     }
 
     private void initDataHandler() {
         initUser();
-
-        databaseHandler = new DatabaseHandler(this);
-        databaseHandler.addUser(usermodel);
-        User model = databaseHandler.getMahasiswa(1);
-        Log.e("record", model.getUsername().toString());
-        Intent admin = new Intent(RegisterActivity.this, LoginActivity.class);
-        startActivity(admin);
-        finish();
+        String pass = etPasswordRegister.getText().toString();
+        if(TextUtils.isEmpty(pass) || pass.length() < 6)
+        {
+            etPasswordRegister.setError("You must have 6 characters in your password");
+            return;
+        }
+        else {
+            databaseHandler = new DatabaseHandler(this);
+            databaseHandler.addUser(usermodel);
+            User model = databaseHandler.getMahasiswa(1);
+            Log.e("record", model.getUsername().toString());
+            Intent admin = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(admin);
+            finish();
+        }
     }
 }

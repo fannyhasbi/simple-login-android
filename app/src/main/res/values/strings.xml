@@ -9,7 +9,7 @@
     <string name="logout">Logout</string>
     <string name="Header">Selamat datang Di Praktikum MDP 2018</string>
     <string name="name">Nama Kamu</string>
-    <string name="description">Selanjutnya akan di jelaskan di modul android berikutnya Mengenai API dan MVP</string>
+    <string name="description">Ini adalah penjelasan dan aplikasi dari Kelompok 06.</string>
     <string name="title_activity_list_user">ListUser</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
