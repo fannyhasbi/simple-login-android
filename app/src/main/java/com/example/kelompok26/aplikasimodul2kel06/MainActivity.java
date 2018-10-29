@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         logout();
         about();
         kelompok();
-        //email();
+        email();
     }
 
     @Override
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogoutMain = findViewById(R.id.btnLogoutMain);
         btnAbout = findViewById(R.id.btnAbout);
         btnKelompok = findViewById(R.id.btnKelompok);
+        btnEmail = findViewById(R.id.btnEmail);
         exit = findViewById(R.id.btnLogoutMain);
     }
 
